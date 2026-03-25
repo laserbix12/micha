@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your-secret-key-aquí')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 DEBUG ='RENDER' not in os.environ
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['andres-7mau.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
