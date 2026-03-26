@@ -78,7 +78,13 @@ USE_I18N = True
 USE_TZ = True
 
 # 2. Configuración de Archivos Estáticos (FINAL)
+# Archivos estáticos (CSS, JS, imágenes)
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Configuración para producción (Render)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Solo se activa en Render (Producción)
 if not DEBUG:
