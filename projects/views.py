@@ -7,4 +7,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
 # Este archivo puede quedar vacío o eliminarse si usas api.py
 # para definir tus ViewSets.
+# Las vistas de la API se encuentran en api.py
 pass
+
