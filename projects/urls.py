@@ -1,8 +1,10 @@
+from django.urls import path, include
 from rest_framework import routers
-from .api import ProjectViewSet 
+from projects.views import ProjectViewSet
 
 router = routers.DefaultRouter()
+router.register(r'projects', ProjectViewSet)
 
-router.register('api/projects', ProjectViewSet, 'projects')
-
-urlpatterns = router.urls
+urlpatterns = [
+    path('api/', include(router.urls)),
+]
